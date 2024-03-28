@@ -1,4 +1,5 @@
 ﻿using CryShop.Data;
+using CryShop.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,12 @@ namespace CryShop.Windows.Main
             this.Hide();
             Authorized authorized = new Authorized();
             authorized.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            UpdatePrice updatePrice = new UpdatePrice();
+            updatePrice.StartUpdating("BTC","ETH","BNB");
         }
     }
 }
