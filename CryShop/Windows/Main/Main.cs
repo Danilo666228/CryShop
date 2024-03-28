@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CryShop.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,24 @@ namespace CryShop.Windows.Main
         {
             InitializeComponent();
         }
-        public void FillMiniPrifile()
+        public async void FillMiniPrifile()
         {
+            User user = new User(); 
+            var result = await user.FillMiniProfile(UserId);
+            lblNameUser.Text = result.lastname;
+            lblBalanceUser.Text = result.balance.ToString();
+        }
 
+        private void Main_Activated(object sender, EventArgs e)
+        {
+            FillMiniPrifile();
+        }
+
+        private void btnChangeAccount_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Authorized authorized = new Authorized();
+            authorized.Show();
         }
     }
 }

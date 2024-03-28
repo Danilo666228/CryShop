@@ -61,5 +61,18 @@ namespace CryShop.Data
                 }
             }
         }
+        public async Task<(string lastname, decimal? balance)> FillMiniProfile(int userId)
+        {
+            using (ConnectDb db = new ConnectDb())
+            {
+                User user = await db.Users
+                    .FirstOrDefaultAsync(t=> t.Id == userId);
+                if (user != null)
+                {
+                    return (user.LastName, user.Balance);
+                }
+                return (null, null);
+            }
+        }
     }
 }

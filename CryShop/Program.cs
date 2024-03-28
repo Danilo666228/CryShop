@@ -1,4 +1,5 @@
-﻿using CryShop.Windows.Registration;
+﻿using CryShop.Windows.Main;
+using CryShop.Windows.Registration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
