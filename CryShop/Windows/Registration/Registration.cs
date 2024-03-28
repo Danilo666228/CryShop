@@ -24,7 +24,7 @@ namespace CryShop.Windows.Registration
             Validate validate = new Validate();
             if (validate.RegistrationUser(txbLastName.Text, txbFirstName.Text, txbMiddleName.Text, txbLogin.Text, txbPassword.Text, txbRepeatPassword.Text))
             {
-                if (await user.Add(txbLastName.Text, txbFirstName.Text, txbMiddleName.Text, txbLogin.Text, txbPassword.Text))
+                if (await Task.Run(() => user.Add(txbLastName.Text, txbFirstName.Text, txbMiddleName.Text, txbLogin.Text, txbPassword.Text)))
                 {
                     this.Hide();
                     Authorized authorized = new Authorized();

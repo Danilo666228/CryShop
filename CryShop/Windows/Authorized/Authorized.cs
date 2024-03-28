@@ -1,4 +1,5 @@
 ﻿using CryShop.Data;
+using CryShop.Windows.Main;
 using CryShop.Windows.Registration;
 using System;
 using System.Collections.Generic;
@@ -23,12 +24,16 @@ namespace CryShop
         {
             User user = new User();
             Validate validate = new Validate();
-            int UserId = await user.GetId(txbLogin.Text, txbPassword.Text);
+            int UserId = await Task.Run(() => user.GetId(txbLogin.Text, txbPassword.Text));
             if (validate.LoginUser(txbLogin.Text, txbPassword.Text))
             {
                 if (UserId != 0)
                 {
+                    this.Hide();
                     MessageBox.Show("Вы успешно вошли");
+                    Main mainForm = new Main();
+                    mainForm.UserId = UserId;
+                    mainForm.Show();
                 }
                 else
                 {
