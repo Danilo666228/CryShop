@@ -14,5 +14,6 @@ namespace CryShop.Data
             
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Coin> Coins { get; set; }
     }
 }

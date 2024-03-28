@@ -65,8 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Coin.cs" />
     <Compile Include="Data\ConnectDb.cs" />
     <Compile Include="Data\User.cs" />
+    <Compile Include="Migrations\202403261308173_InitialCreate.cs" />
+    <Compile Include="Migrations\202403261308173_InitialCreate.Designer.cs">
+      <DependentUpon>202403261308173_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403281715352_Coin.cs" />
+    <Compile Include="Migrations\202403281715352_Coin.Designer.cs">
+      <DependentUpon>202403281715352_Coin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Validate.cs" />
     <Compile Include="Windows\Authorized\Authorized.cs">
       <SubType>Form</SubType>
@@ -88,6 +98,12 @@
     <Compile Include="Windows\Registration\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\202403261308173_InitialCreate.resx">
+      <DependentUpon>202403261308173_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403281715352_Coin.resx">
+      <DependentUpon>202403281715352_Coin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Authorized\Authorized.resx">
       <DependentUpon>Authorized.cs</DependentUpon>
     </EmbeddedResource>
