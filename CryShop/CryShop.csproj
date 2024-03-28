@@ -99,6 +99,24 @@
     <Compile Include="Windows\Registration\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\UserControls\Main\MainControl\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\UserControls\Main\MainControl\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserControls\Main\MarketControl\MarketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\UserControls\Main\MarketControl\MarketControl.Designer.cs">
+      <DependentUpon>MarketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserControls\Main\ProfileControl\ProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\UserControls\Main\ProfileControl\ProfileControl.Designer.cs">
+      <DependentUpon>ProfileControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Migrations\202403261308173_InitialCreate.resx">
       <DependentUpon>202403261308173_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +140,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Registration\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\UserControls\Main\MainControl\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\UserControls\Main\MarketControl\MarketControl.resx">
+      <DependentUpon>MarketControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\UserControls\Main\ProfileControl\ProfileControl.resx">
+      <DependentUpon>ProfileControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

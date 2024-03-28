@@ -43,6 +43,9 @@
             this.btnMarketControl = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfileControl = new Guna.UI2.WinForms.Guna2Button();
             this.btnChangeAccount = new Guna.UI2.WinForms.Guna2Button();
+            this.MainControl = new CryShop.Windows.UserControls.Main.MainControl.MainControl();
+            this.MarketControl = new CryShop.Windows.UserControls.Main.MarketControl.MarketControl();
+            this.ProfileControl = new CryShop.Windows.UserControls.Main.ProfileControl.ProfileControl();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -161,6 +164,7 @@
             this.btnMainControl.Size = new System.Drawing.Size(289, 86);
             this.btnMainControl.TabIndex = 1;
             this.btnMainControl.Text = "Главная";
+            this.btnMainControl.Click += new System.EventHandler(this.btnMainControl_Click);
             // 
             // btnMarketControl
             // 
@@ -179,6 +183,7 @@
             this.btnMarketControl.Size = new System.Drawing.Size(289, 86);
             this.btnMarketControl.TabIndex = 1;
             this.btnMarketControl.Text = "Рынок";
+            this.btnMarketControl.Click += new System.EventHandler(this.btnMarketControl_Click);
             // 
             // btnProfileControl
             // 
@@ -197,6 +202,7 @@
             this.btnProfileControl.Size = new System.Drawing.Size(289, 86);
             this.btnProfileControl.TabIndex = 1;
             this.btnProfileControl.Text = "Профиль";
+            this.btnProfileControl.Click += new System.EventHandler(this.btnProfileControl_Click);
             // 
             // btnChangeAccount
             // 
@@ -217,12 +223,42 @@
             this.btnChangeAccount.Text = "Сменить аккаунт";
             this.btnChangeAccount.Click += new System.EventHandler(this.btnChangeAccount_Click);
             // 
+            // MainControl
+            // 
+            this.MainControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MainControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainControl.Location = new System.Drawing.Point(289, 43);
+            this.MainControl.Name = "MainControl";
+            this.MainControl.Size = new System.Drawing.Size(1411, 757);
+            this.MainControl.TabIndex = 2;
+            // 
+            // MarketControl
+            // 
+            this.MarketControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MarketControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MarketControl.Location = new System.Drawing.Point(289, 43);
+            this.MarketControl.Name = "MarketControl";
+            this.MarketControl.Size = new System.Drawing.Size(1411, 757);
+            this.MarketControl.TabIndex = 3;
+            // 
+            // ProfileControl
+            // 
+            this.ProfileControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProfileControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProfileControl.Location = new System.Drawing.Point(289, 43);
+            this.ProfileControl.Name = "ProfileControl";
+            this.ProfileControl.Size = new System.Drawing.Size(1411, 757);
+            this.ProfileControl.TabIndex = 4;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1700, 800);
+            this.Controls.Add(this.ProfileControl);
+            this.Controls.Add(this.MarketControl);
+            this.Controls.Add(this.MainControl);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -255,5 +291,8 @@
         private Guna.UI2.WinForms.Guna2Button btnChangeAccount;
         private Guna.UI2.WinForms.Guna2Button btnProfileControl;
         private Guna.UI2.WinForms.Guna2Button btnMarketControl;
+        private UserControls.Main.MainControl.MainControl MainControl;
+        private UserControls.Main.ProfileControl.ProfileControl ProfileControl;
+        private UserControls.Main.MarketControl.MarketControl MarketControl;
     }
 }
